@@ -1,0 +1,74 @@
+<script>
+var klaroConfig = {
+	elementID: 'klaro',
+	cookieName: 'klaro',
+	cookieExpiresAfterDays: 365,
+	acceptAll: true,
+	translations: {
+		de: {
+			consentModal: {
+				title: 'Detaillierte Cookieeinstellungen',
+
+				privacyPolicy: {
+					name: 'Datenschutz',
+					text: 'Zu unseren Datenschutzbestimmungen: {privacyPolicy}'
+				},
+			},
+			acceptSelected: 'Ausgewählte Cookies akzeptieren',
+			decline: 'Nur Basis-Cookies akzeptieren',
+			consentNotice: {
+				learnMore: 'Detaillierte Cookieeinstellungen'
+			},
+			acceptAll: 'Alle Cookies akzeptieren',
+			basic: {
+				description: 'Technisch notwendige Cookies (Basis-Cookie)',
+			},
+			matomo: {
+				description: 'Sammeln von Besucherstatistiken (Basis-Cookie)',
+			},
+			hotjar: {
+				description: 'Sammeln von Besucherstatistiken',
+			},
+			analytics: {
+				description: 'Sammeln von Besucherstatistiken',
+			},
+			googleRemarketing: {
+				description: 'Individualisierung von Anzeigen',
+			},
+			facebookPixel: {
+				description: 'Individualisierung von Anzeigen',
+			},
+			purposes: {
+				basic: 'Technische Cookies',
+				analytics: 'Analytics',
+				ads: 'Werbung'
+			},
+			poweredBy: ''
+		}
+	},
+	apps: [
+		{
+			name: 'basic',
+			title: 'Notwendige Cookies',
+			purposes: ['basic'],
+			required: true,
+			default: true
+		},
+		{
+			name: 'matomo',
+			title: 'Matomo',
+			purposes: ['analytics'],
+			default: true,
+			optOut: true
+		}
+	],
+};
+</script>
+<script defer type="application/javascript"
+        src="https://klaro.kiprotect.com/klaro.js"></script>
+        
+<script type="text/plain"
+	        data-type="text/javascript"
+	        data-name="matomo">
+	        document.body.innerHTML += "<p>Executed</p>";
+</script>
